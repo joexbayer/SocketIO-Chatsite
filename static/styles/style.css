@@ -1,0 +1,427 @@
+body {
+	background-color: black;
+	font-family: 'Red Rose', cursive;
+}
+html, body {margin:0;padding:0;height:100%;}
+
+.info-text {
+	left: 15%;
+	right: 50%;
+	color: white;
+	position: absolute;
+	font-size: 20px;
+	top: -2%;
+}
+
+.block-background {
+	height: 100vh;
+	width: 99vw;
+	background-color: rgba(0,0,0,0.8);
+	position: absolute;
+	z-index: 999;
+}
+
+.encrypted-picture {
+	position: absolute;
+	left: 75%;
+	top: 70%;
+	height: 10%;
+	width: 10%;
+	transition: 1s;
+	z-index: 99999999;
+}
+.encrypted-picture:hover {
+	transition: 2s;
+	left: 20%;
+	top: 15%;
+	height: 65%;
+	width: 65%;
+	z-index: 99999999;
+}
+.encrypt-info{
+	height: 75%;
+	width: 75%;
+	right: 10%;
+	top: 10%;
+	position: absolute;
+	background-color: white;
+	z-index: 9999;
+}
+.encrypt-info-inner{
+	height: 70%;
+	width: 85%;
+	margin: auto;
+	margin-top: 5%;
+	outline: 1px solid black;
+	text-align: center;
+	font-size: 100%;
+	word-wrap: break-word;
+	overflow: scroll;
+}
+
+.header-chat {
+	height: 5%;
+	margin: 0;
+	padding: 0;
+}
+
+.header-text {
+	float: left;
+	width: 90%;
+}
+
+.header-options {
+	margin-top: 1%;
+	position: absolute;
+	left: 40%;
+	width: 40%;
+	height: 8%;
+	display: flex;
+	flex-direction: row;
+}
+.header-options p {
+	margin: 0;
+	padding: 0;
+	margin-top: 0.5%;
+}
+
+.checkmark{
+  	height: 18px;
+  	width: 18px;
+  	background-color: #48f542;
+  	border-radius: 100px;
+  	margin-left: 10%;
+}
+.checkmark:checked  {
+  background-color: #48f542;
+}
+
+
+.header-picture {
+	flex: right;
+}
+.header-picture-img{
+	height: 2.5%;
+	width: 2.5%;
+	background-color: #48f542;
+	margin: 0;
+	padding: 0;
+	margin-top: 0.5%;
+	border-radius: 20px;
+}
+
+.submit-button {
+	margin: auto;
+	top: 45%;
+	left: 43.5%;
+	position: absolute;
+	width: 200px;
+	height: 50px;
+	background: white;
+	transition: 1s ease-in-out;
+	outline: 2px solid none;
+	font-size: 15px;
+	font-family: 'Red Rose', cursive;
+}
+
+.main-container {
+	font-family: 'Red Rose', cursive;
+	width: 80%;
+	text-align: center;
+	height: 50%;
+	top: 30%;
+	left:8%;
+	position: absolute;
+
+}
+
+.input-field {
+	height: 98%;
+	width: 98%;
+	background: transparent;
+	border-width:0px;
+	border:none;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	z-index: -1;
+	animation: blinker 1.5s linear infinite;
+	font-family: 'Red Rose', cursive;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 25%;
+  }
+}
+
+input:focus{
+    outline: none;
+    border-width:0px;
+	border:none;
+}
+
+.main-chat-container {
+	font-family: 'Red Rose', cursive;
+	width: 100%;
+	height: 100%;
+	color:white;
+	overflow: hidden;
+}
+
+ol li{
+  list-style-type: none;
+}
+
+.chat-window {
+	height: 85vh;
+	width: 79%;
+	margin-left: 2%;
+	float: left;
+	margin-bottom: 1%;
+	background-color: black;
+	outline: 1px solid white;
+	position: relative;
+}
+
+.chat-message-container{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	overflow: scroll;
+	word-wrap: break-word;
+
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.chat-message-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.chat-message-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.chat-list {
+	margin: 0;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	bottom: 1%;
+	margin-left: 1.5%;
+}
+.chat-list p {
+	margin: 0;
+	padding: 0;
+}
+
+.chat-input {
+	margin-left: 2%;
+	width: 80%;
+	top: 94%;
+	position: absolute;
+}
+
+
+.chat-submit-button {
+	margin: auto;
+	position: absolute;
+	margin-left: 3.3%;
+	width: 18%;
+	background: white;
+	transition: 1s ease-in-out;
+	outline: 2px solid none;
+	font-size: 15px;
+	font-family: 'Red Rose', cursive;
+}
+.users-window {
+	height: 50vh;
+	width: 15%;
+	margin-right: 2%;
+	margin-left: 2%;
+	float: right;
+	background-color: black;
+	outline: 1px solid white;
+	text-align: center;
+	overflow-y: scroll;
+}
+
+.encrypted-window {
+	height: 35vh;
+	width: 15%;
+	margin-right: 2%;
+	margin-left: 2%;
+	background-color: black;
+	float: right;
+	outline: 1px solid white;
+	text-align: center;
+}
+.encrypted-window-text {
+	height: 90%;
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	word-wrap: break-word;
+	font-size: 80%;
+	overflow: hidden;
+}
+.encrypted-window p {
+	padding: 0;
+	margin: 0;
+
+}
+
+.message-input {
+	z-index: 999999;
+}
+
+/*
+	https://codepen.io/jpost-design/pen/EKZLzK
+*/
+
+@keyframes glowing {
+  0% { box-shadow: 0 0 -10px white; }
+  40% { box-shadow: 0 0 30px white; }
+  60% { box-shadow: 0 0 30px white; }
+  100% { box-shadow: 0 0 -10px white; }
+}
+
+.glow {
+  animation: glowing 5000ms infinite;
+}
+/*
+	https://codepen.io/vitor-siqueira/pen/xNBExN
+*/
+
+.center {
+  width: 50%;
+  height: 50%;
+  left: 36.5%;
+  right: 50%;
+  position: absolute;
+}
+.btn {
+  width: 348px;
+  height: 48px;
+  background: transparent;
+  transition: 1s ease-in-out;
+  outline: 2px solid none;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 400 1000;
+  stroke-dashoffset: 400;
+  transition: 1s ease-in-out;
+  z-index: -1;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  outline: 2px solid white;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -1000;
+}
+
+.btn span {
+  color: lightgreen;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+/*
+	https://www.w3schools.com/howto/howto_css_placeholder.asp
+*/
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+
+/* Mobile fix */
+@media (max-width: 800px) {
+    .center {
+		width: 50%;
+		height: 50vh;
+		left: 20.5%;
+		right: 20%;
+		position: absolute;
+	}
+	.submit-button {
+		margin: auto;
+		top: 45%;
+		left: 44.5%;
+		position: absolute;
+	}
+	.main-chat-container {
+		font-family: 'Red Rose', cursive;
+		width: 100%;
+		height: 50%;
+		color:white;
+		overflow: hidden;
+	}
+	.chat-input {
+		margin-left: 2%;
+		width: 80%;
+		height: 50%;
+		top: 94%;
+		position: absolute;
+	}
+
+}
+
+@media (min-width: 1350px) {
+	.main-container {
+		font-family: 'Red Rose', cursive;
+		width: 80%;
+		text-align: center;
+		height: 50%;
+		top: 30%;
+		left:10%;
+		position: absolute;
+
+	}
+	.submit-button {
+		margin: auto;
+		top: 45%;
+		left: 41.5%;
+		position: absolute;
+		width: 200px;
+		height: 50px;
+		background: white;
+		transition: 1s ease-in-out;
+		outline: 2px solid none;
+		font-size: 15px;
+		font-family: 'Red Rose', cursive;
+	}
+}
