@@ -208,10 +208,19 @@ ol li{
 	width: 100%;
 	height: auto;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	position: absolute;
 	bottom: 1%;
 	margin-left: 1.5%;
+}
+
+.chat-list div {
+	display: flex;
+	flex-direction: row;
+}
+.chat-list p {
+	display: flex;
+	flex-direction: row;
 }
 .chat-list p {
 	margin: 0;
