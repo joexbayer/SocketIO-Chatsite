@@ -92,6 +92,7 @@ function updateMessageBoard(title, msg){
     var checkBox1 = document.getElementById("html-filter");
     var checkBox2 = document.getElementById("char-filter");
     var p = document.createElement('p');
+    var chat_cont = document.createElement('div');
     var message_p = document.createElement('p');
     chatlog.push(p);
     if(chatlog.length > 35){
@@ -115,8 +116,9 @@ function updateMessageBoard(title, msg){
     p.style.color = "#48f542";
     message_p.appendChild(document.createTextNode(msg));
     message_p.style.marginLeft = "1%";
-    ul.appendChild(p);
-    ul.appendChild(message_p);
+    chat_cont.appendChild(p);
+    chat_cont.appendChild(message_p);
+    ul.appendChild(chat_cont);
     ul.flexDirection= "column-reverse";
 }
 
