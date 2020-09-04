@@ -19,7 +19,8 @@ Chatsite with rooms, created with Socket IO and Flask using a Public Key Infrast
   You can of course remove the "room-" and name the room whatever you wish.</p>
 
 <h3>Encryption: </h3>
-<p> Temp text </p>
+<p> Public Key Infrastructure with AES symmetric encryption for all room data (messages, usernames) Not readble by server! <br>
+RSA asymmetric encryption for all communication with server. AES encryption key is based on room name. So the AES key is not transferred!</p>
 
 ![alt text](https://github.com/joexbayer/SocketIO-Chatsite/blob/master/static/styles/encryption.png?raw=true)
 
