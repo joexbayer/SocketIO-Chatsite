@@ -1,6 +1,8 @@
 # SocketIO-Chatsite
 Chatsite with rooms, created with Socket IO and Flask using a Public Key Infrastructure (AES and RSA).
 
+<p>TO USE: Replace IP (127.0.0.1) in server.py to your IP (requires portforwarding port: 5000)</p>
+
 <p>How it works.</p>
 
 <p> When entering the site, you will have to chose a roomname and a username. <br>
