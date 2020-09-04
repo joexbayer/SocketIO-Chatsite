@@ -21,7 +21,6 @@ socket.on('user_left', function(user) {
 });
 
 socket.on('new_user', function(user) {
-    if(!users.includes(decryptRoom(user))){
         //add new user to list
         var ul = document.getElementById("users-list_id");
         var li = document.createElement('li');
@@ -29,7 +28,6 @@ socket.on('new_user', function(user) {
         users.push(decryptRoom(user));
         li.appendChild(document.createTextNode(decryptRoom(user)));
         ul.appendChild(li);
-    }
 });
 
 //on connect
