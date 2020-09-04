@@ -66,13 +66,11 @@ function formSubmitt(){
         return;
     }
 
-    /*create AES sha256, encryption of room_id
+    //create AES sha256, encryption of room_id
     var md = forge.md.sha256.create();
     md.start();
     md.update(room_id, "utf8");
-    room_key = md.digest().toHex();*/
-
-    room_key = encryptMainPublic(room_id);
+    room_key = md.digest().toHex();
     //room_key = room_key.substr(0, 32);
 
     //add socket id to room
