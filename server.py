@@ -57,7 +57,7 @@ def joinRoom(data):
 	id_bind[io_id] = username
 	join_room(room_name)
 	emit("connected", return_data, room=io_id)
-	emit("new_user", username, room=room_name)
+	emit("new_user", username, room=room_name, include_self=False)
 
 @socketio.on('disconnect_user')
 def disconnect(data):
