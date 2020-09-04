@@ -9,9 +9,14 @@ Chatsite with rooms, created with Socket IO and Flask using a Public Key Infrast
   If a room already exists with your chosen name, then you will join that room and see <br>
   messages sent in that room and current users. If the rooms doesnt not already exist, then <br>
   you will automatically create a new room and join that one. If you want people to join your room <br>
-  simply give them the roomname. If your chosen username is already in use, a number will be added behind <br>
-  your chosen username. Like: Username -> Username4.
+  simply give them the roomname. It is possible to chose already existing usernames, that is for privacy <br> 
+  reasons. The server only sees encrypted usernames and cannot know if two users have the same. This causes <br>
+  no problems for communication, but might cause confusion for other users. <br>
+  You can always reload the page and chose another username!
+  
   </p>
+ 
+ ![alt text](https://github.com/joexbayer/SocketIO-Chatsite/blob/master/static/styles/LoginScreen.png?raw=true)
 
 <h3>Rooms: </h3>
 <p> The roomname will act as a password. If you want to have a private conversation <br>
@@ -19,6 +24,8 @@ Chatsite with rooms, created with Socket IO and Flask using a Public Key Infrast
   will be able to join it. When clicking the roomname input box the text "room-" will be added <br>
   infront of your input that is to make short roomname a bit longer for more safe encryption. <br>
   You can of course remove the "room-" and name the room whatever you wish.</p>
+ 
+ ![alt text](https://github.com/joexbayer/SocketIO-Chatsite/blob/master/static/styles/ChatExample.png?raw=true)
 
 <h3>Encryption: </h3>
 <p> Public Key Infrastructure with AES symmetric encryption for all room data (messages, usernames) Not readble by server! <br>
