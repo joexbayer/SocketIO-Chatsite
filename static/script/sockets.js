@@ -10,7 +10,7 @@ socket.on('send_public_key', function(key) {
 
 window.onbeforeunload = function(){
     //disconnect user
-   socket.emit('disconnect_user', {"roomname": encryptMainPublic(room_id)});
+   socket.emit('disconnect_user', {"roomname": encryptMainPublic(room_key)});
 }
 
 socket.on('user_left', function(user) {

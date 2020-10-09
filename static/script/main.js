@@ -46,7 +46,7 @@ function inputRoomText(){
 
 function formSubmitt(){
     if(room_id != ""){
-        socket.emit('leave-room', room_id);
+        socket.emit('leave-room', room_key);
     }
 
     //get input text
@@ -74,7 +74,7 @@ function formSubmitt(){
     //room_key = room_key.substr(0, 32);
 
     //add socket id to room
-    room_id_sub = room_id +" "+socket.id;
+    room_id_sub = room_key +" "+socket.id;
 
     //encrypt data
     room_id_enc = encryptMainPublic(room_id_sub);
@@ -150,7 +150,7 @@ function sendMessage(){
             timestamp = d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
         }
 
-        room_id_sub = room_id +" "+socket.id;
+        room_id_sub = room_key +" "+socket.id;
         //encrypt data
         room_id_enc = encryptMainPublic(room_id_sub);
         timestamp_enc = encryptRoom(timestamp);

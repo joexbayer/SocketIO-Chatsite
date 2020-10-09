@@ -43,7 +43,7 @@ def joinRoom(data):
 		return
 	user_id = data.split(":")[1]
 
-	print("[SERVER] Someone joined room "+room_name+"!")
+	print("[SERVER] User Joined")
 
 	if(room_name not in users.keys()):
 		users[room_name] = []
@@ -72,6 +72,8 @@ def disconnect(data):
 
 @socketio.on('send_message')
 def sendMessage(data):
+	print(logs)
+	print(id_bind)
 	io_id = request.sid;
 
 	room_name = decryptRSA(data["room"], private_key).decode("utf-8").split()[0]

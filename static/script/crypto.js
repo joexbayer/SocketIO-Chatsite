@@ -23,7 +23,7 @@ function decryptRoom(data){
     ciphertext.words.splice(0, 4); // delete 4 words = 16 bytes
     ciphertext.sigBytes -= 16;
 
-    var key = CryptoJS.enc.Utf8.parse(room_key);
+    var key = CryptoJS.enc.Utf8.parse(room_id);
 
     // decryption
     var decrypted = CryptoJS.AES.decrypt({ciphertext: ciphertext}, key, {
@@ -35,7 +35,7 @@ function decryptRoom(data){
 
 
 function encryptRoom(s) {
-        var key = CryptoJS.enc.Utf8.parse(room_key);
+        var key = CryptoJS.enc.Utf8.parse(room_id);
         var iv = CryptoJS.lib.WordArray.random(16);
         var e = CryptoJS.AES.encrypt(s, key, {iv: iv, mode: CryptoJS.mode.CFB})
         var r =  CryptoJS.enc.Utf8.parse("")
